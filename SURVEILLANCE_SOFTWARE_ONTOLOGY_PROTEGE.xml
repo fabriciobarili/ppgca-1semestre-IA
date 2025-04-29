@@ -1,0 +1,154 @@
+<rdf:RDF xmlns="http://www.example.org/software-review#" xmlns:sw="http://www.example.org/software-review#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.example.org/software-review">
+<owl:Ontology rdf:about="http://www.example.org/software-review"/>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  http://www.w3.org/2002/07/owl#maxCardinality  -->
+<owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxCardinality"/>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  http://www.w3.org/2001/XMLSchema#date  -->
+<rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  http://www.example.org/software-review#hasReview  -->
+<owl:ObjectProperty rdf:about="http://www.example.org/software-review#hasReview">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Software"/>
+<rdfs:range rdf:resource="http://www.example.org/software-review#Review"/>
+<rdfs:label>hasReview</rdfs:label>
+</owl:ObjectProperty>
+<!--  http://www.example.org/software-review#madeBy  -->
+<owl:ObjectProperty rdf:about="http://www.example.org/software-review#madeBy">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Review"/>
+<rdfs:range rdf:resource="http://www.example.org/software-review#Reviewer"/>
+<rdfs:label>madeBy</rdfs:label>
+</owl:ObjectProperty>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  http://www.example.org/software-review#comentario  -->
+<owl:DatatypeProperty rdf:about="http://www.example.org/software-review#comentario">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Review"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:label>comentario</rdfs:label>
+</owl:DatatypeProperty>
+<!--  http://www.example.org/software-review#data_avaliacao  -->
+<owl:DatatypeProperty rdf:about="http://www.example.org/software-review#data_avaliacao">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Review"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+<rdfs:label>data_avaliacao</rdfs:label>
+</owl:DatatypeProperty>
+<!--  http://www.example.org/software-review#desvantagem  -->
+<owl:DatatypeProperty rdf:about="http://www.example.org/software-review#desvantagem">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Review"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:label>desvantagem</rdfs:label>
+</owl:DatatypeProperty>
+<!--  http://www.example.org/software-review#fonte  -->
+<owl:DatatypeProperty rdf:about="http://www.example.org/software-review#fonte">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Review"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:label>fonte</rdfs:label>
+</owl:DatatypeProperty>
+<!--  http://www.example.org/software-review#frequencia  -->
+<owl:DatatypeProperty rdf:about="http://www.example.org/software-review#frequencia">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Reviewer"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:label>frequencia</rdfs:label>
+</owl:DatatypeProperty>
+<!--  http://www.example.org/software-review#frequencia_complementar  -->
+<owl:DatatypeProperty rdf:about="http://www.example.org/software-review#frequencia_complementar">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Reviewer"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:label>frequencia_complementar</rdfs:label>
+</owl:DatatypeProperty>
+<!--  http://www.example.org/software-review#motivo_mudanca  -->
+<owl:DatatypeProperty rdf:about="http://www.example.org/software-review#motivo_mudanca">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Review"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:label>motivo_mudanca</rdfs:label>
+</owl:DatatypeProperty>
+<!--  http://www.example.org/software-review#name  -->
+<owl:DatatypeProperty rdf:about="http://www.example.org/software-review#name">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Software"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:label>name</rdfs:label>
+</owl:DatatypeProperty>
+<!--  http://www.example.org/software-review#porte  -->
+<owl:DatatypeProperty rdf:about="http://www.example.org/software-review#porte">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Reviewer"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:label>porte</rdfs:label>
+</owl:DatatypeProperty>
+<!--  http://www.example.org/software-review#recomendacao  -->
+<owl:DatatypeProperty rdf:about="http://www.example.org/software-review#recomendacao">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Review"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:label>recomendacao</rdfs:label>
+</owl:DatatypeProperty>
+<!--  http://www.example.org/software-review#setor  -->
+<owl:DatatypeProperty rdf:about="http://www.example.org/software-review#setor">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Reviewer"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:label>setor</rdfs:label>
+</owl:DatatypeProperty>
+<!--  http://www.example.org/software-review#sft_anterior  -->
+<owl:DatatypeProperty rdf:about="http://www.example.org/software-review#sft_anterior">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Review"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:label>sft_anterior</rdfs:label>
+</owl:DatatypeProperty>
+<!--  http://www.example.org/software-review#software_id  -->
+<owl:DatatypeProperty rdf:about="http://www.example.org/software-review#software_id">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Software"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:label>software_id</rdfs:label>
+</owl:DatatypeProperty>
+<!--  http://www.example.org/software-review#vantagem  -->
+<owl:DatatypeProperty rdf:about="http://www.example.org/software-review#vantagem">
+<rdfs:domain rdf:resource="http://www.example.org/software-review#Review"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:label>vantagem</rdfs:label>
+</owl:DatatypeProperty>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  http://www.example.org/software-review#Review  -->
+<owl:Class rdf:about="http://www.example.org/software-review#Review">
+<rdfs:label>Review</rdfs:label>
+</owl:Class>
+<!--  http://www.example.org/software-review#Reviewer  -->
+<owl:Class rdf:about="http://www.example.org/software-review#Reviewer">
+<rdfs:label>Reviewer</rdfs:label>
+</owl:Class>
+<!--  http://www.example.org/software-review#Software  -->
+<owl:Class rdf:about="http://www.example.org/software-review#Software">
+<rdfs:label>Software</rdfs:label>
+</owl:Class>
+<rdf:Description>
+<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+</rdf:Description>
+</rdf:RDF>
+<!--  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi  -->
